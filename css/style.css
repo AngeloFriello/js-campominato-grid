@@ -9,9 +9,19 @@
     margin: 0 auto;
 }
 
-.grid{
+.grid-easy{
     display: grid;
     grid-template-columns: repeat(10,1fr);
+}
+
+.grid-mid{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+}
+
+.grid-hard{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
 }
 
 .cell{
