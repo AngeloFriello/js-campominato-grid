@@ -23,7 +23,7 @@ playBtnDOMElement.addEventListener('click', function (){
         console.log(currentCellDOMElement)
 
         currentCellDOMElement.addEventListener('click', function() {
-            currentCellDOMElement.classList.add('bg-green')
+            currentCellDOMElement.classList.add('bg-azurro')
         })
 
     }
