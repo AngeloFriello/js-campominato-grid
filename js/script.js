@@ -10,24 +10,23 @@ playBtnDOMElement.addEventListener('click', function (){
     for (let i = 1; i <= 100 ;i++){
         n = i
         console.log(n)
-        gridDOMElement.innerHTML += `<div class="cell">${n}</div>`
-
-       
+        gridDOMElement.innerHTML += `<div class="cell ">${n}</div>`
     }
 
-    const cellDOMElement = querySelectorall('.cell')
+    const cellDOMElements = document.querySelectorAll('.cell')
+    console.log(cellDOMElements)
 
-    for (let i = 0; i < cellDOMElement; i++){
+    for (let i = 0; i < cellDOMElements.length; i++){
 
-        currentCellDOMElement = cellDOMElement[i]
+        const currentCellDOMElement = cellDOMElements[i]
 
-        cellDOMElement[i].addEventListener('click', function() {
-            currentCellDOMElement.classList.add('bg-.green')
+        console.log(currentCellDOMElement)
+
+        currentCellDOMElement.addEventListener('click', function() {
+            currentCellDOMElement.classList.add('bg-green')
         })
 
     }
         
 }
 )
-    
- 

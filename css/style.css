@@ -11,12 +11,15 @@
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(10,1fr)
+    grid-template-columns: repeat(10,1fr);
 }
 
 .cell{
     aspect-ratio: 1;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bg-green{
