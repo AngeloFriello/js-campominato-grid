@@ -2,18 +2,16 @@ const selectDOMElement = document.getElementById('select');
 console.log(selectDOMElement);
 const playBtnDOMElement = document.querySelector('.play-btn');
 
-const gridEasyDOMElement = document.querySelector('.grid-easy');
-const gridMidDOMElement = document.querySelector('.grid-mid');
-const gridHardDOMElement = document.querySelector('.grid-hard');
-
+const gridDOMElement = document.querySelector('.grid')
 
 playBtnDOMElement.addEventListener('click', function (){
 
-    gridEasyDOMElement.innerHTML = '';
-    gridMidDOMElement.innerHTML = '';
-    gridHardDOMElement.innerHTML = '';
-
     if(selectDOMElement.value == 2){
+
+        
+        gridDOMElement.classList.add('grid-hard')
+        const gridHardDOMElement = document.querySelector('.grid-hard');
+        gridHardDOMElement.innerHTML = '';
 
         for (let i = 1; i <= 100 ;i++){
             n = i;
@@ -38,12 +36,17 @@ playBtnDOMElement.addEventListener('click', function (){
     }
     }else if (selectDOMElement.value == 1){
 
+        
+        gridDOMElement.classList.add('grid-mid')
+        const gridMidDOMElement = document.querySelector('.grid-mid');
+        gridMidDOMElement.innerHTML = '';
+
         for (let i = 1; i <= 81 ;i++){
             n = i
             console.log(n)
             gridMidDOMElement.innerHTML += `<div class="cell ">${n}</div>`
         }
-
+        
         const cellDOMElements = document.querySelectorAll('.cell')
         console.log(cellDOMElements)
 
@@ -61,6 +64,10 @@ playBtnDOMElement.addEventListener('click', function (){
     }
     }else if(selectDOMElement.value == 0){
 
+        gridDOMElement.classList.add('grid-easy')
+        const gridEasyDOMElement = document.querySelector('.grid-easy');
+        gridEasyDOMElement.innerHTML = '';
+        
         for (let i = 1; i <= 49 ;i++){
             n = i
             console.log(n)
