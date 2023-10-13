@@ -24,6 +24,7 @@ playBtnDOMElement.addEventListener('click', function (){
 
         currentCellDOMElement.addEventListener('click', function() {
             currentCellDOMElement.classList.add('bg-azurro')
+        console.log('hai selezionato la casella'+ `${i+1}`)
         })
 
     }
